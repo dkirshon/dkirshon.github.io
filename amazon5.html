@@ -1,6 +1,7 @@
 <html>
 <head>
     <style>
+
         body {
             padding: 0;
             margin: 0;
@@ -9,6 +10,7 @@
             padding-left: 24px;
             padding-right: 24px;
         }
+
         header {
             height: 80px;
         }
@@ -18,10 +20,12 @@
             width: auto;
             float: left;
         }
+
         .end-control {
             float: right;
             padding-top: 16px;
         }
+
         button.end-chat {
             background: #fff;
             border-width: 1px;
@@ -32,6 +36,7 @@
             color: #0272B6;
             font-family: "Open Sans";
         }
+
         input[type=text], select, textarea {
             width: 100%;
             padding: 18px 12px 18px 6px;
@@ -49,6 +54,7 @@
             border-radius: 2px;
             line-height: 24px;
         }
+
         .label {
             font-weight: normal;
             margin-bottom: 6px;
@@ -61,9 +67,11 @@
             -moz-transition: 0.2s ease all;
             -webkit-transition: 0.2s ease all;
         }
+
         .form-field {
             margin-bottom: 20px;
         }
+
         .req {
             pointer-events: none;
             top: 10px;
@@ -71,10 +79,12 @@
             color: #999;
             font-size: 13px;
         }
+
         .form-submit {
             margin-top: 40px;
             text-align: center;
         }
+
         .btn {
             padding: 12px 30px;
             border-color: #0272B6;
@@ -93,6 +103,7 @@
             line-height: 24px;
             font-weight: 300;
         }
+
         .btn:hover {
             padding: 12px;
             border-color: #00619a;
@@ -106,6 +117,7 @@
             background: -ms-linear-gradient(#00619a, #00619a) !important;
             background: linear-gradient(#00619a, #00619a) !important;
         }
+
         .btn:focus {
             border-color: #0272B6;
             text-align: center;
@@ -121,12 +133,15 @@
             background: linear-gradient(#0272B6, #0272B6) !important;
             color: #FFFFFF;
         }
+
         .directly-rtm {
             height: calc(100% - 70px) !important;
         }
+
         .directly-rtm.is-minimized {
             display: none !important;
         }
+
         .footer {
             bottom: 0;
             margin-bottom: 20px;
@@ -139,6 +154,7 @@
             right: 0;
             left: 0;
         }
+
         .chat-content {
             background-color: #fff;
             width: calc(100% - 48px);
@@ -153,6 +169,7 @@
             margin-right: 24px;
             padding-right: 24px;
         }
+
     </style>
 
     <script>
@@ -162,6 +179,7 @@
             var questionText = document.getElementsByName("input-question")[0].value;
             var zipCode = document.getElementsByName("input-zip")[0].value;
             var reason = document.getElementsByName("input-reason")[0].value;
+
             DirectlyRTM("askQuestion", {
                 questionText: questionText,
                 name: fullname,
@@ -176,6 +194,7 @@
                 }
             });
         }
+
         function closeRTM() {
             DirectlyRTM("minimize");
         }
@@ -184,7 +203,7 @@
 <body>
 <header class="container">
     <div class="logo">
-        <img src="https://dkirshon.github.io/amazonlogo.png" "/>
+        <img src="../images/xfinity-mobile-logo.svg" "/>
     </div>
     <div class="end-control">
         <button class="end-chat" onclick="closeRTM()">End Chat</button>
@@ -210,6 +229,18 @@
                 <input type="text" name="input-zip"/>
             </div>
         </div>
+        <div class="form-field">
+            <div class="label">Reason for chat <span class="req">*</span></div>
+            <div>
+                <select name="input-reason">
+                    <option></option>
+                    <option>Billing and Payment</option>
+                    <option>General Questions</option>
+                    <option>Help Activating</option>
+                    <option>Plan and Pricing Info</option>
+                    <option>Where's my Order?</option>
+                </select>
+            </div>
         </div>
         <div class="form-field">
             <div class="label">Question <span class="req">*</span></div>
@@ -218,6 +249,7 @@
             </div>
         </div>
     </div>
+
     <div class="footer">
         <div class="form-submit">
             <button class="btn" id="rtm-button" onclick="launchRTM()">Start Chat</button>
@@ -243,7 +275,7 @@
         }
     })(document, window, "DirectlyRTM", "https://app.directly.com/widgets/rtm/embed.js");
     DirectlyRTM("config", {
-        id: "2c998593699df8ef0169bae64c5528a0",
+        id: "2c99834e6981dadd016987c8b7516746",
         i18n: {
             "en": {
                 "text": {
@@ -253,5 +285,6 @@
         }
     });
 </script>
+
 </body>
 </html>
