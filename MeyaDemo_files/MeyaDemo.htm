@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!-- saved from url=(0021)https://demo.meya.ai/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Orb Demo</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <link rel="stylesheet" href="./MeyaDemo_files/inter.css">
+    <style>
+        .orb-body {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 10px 16px;
+        }
+
+        @media (min-width: 502px) {
+            .orb-body {
+                padding: 20px 32px;
+            }
+        }
+
+        .orb-h1 {
+            display: flex;
+            flex-direction: row;
+            font-family: Inter, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            font-size: 20px;
+            line-height: 24px;
+            font-weight: 700;
+            color: #236fe2;
+            margin: 8px 0 4px;
+            padding-bottom: 12px;
+            box-shadow: 0 1px 0 0 #4989ea;
+        }
+
+        @media (min-width: 502px) {
+            .orb-h1 {
+                padding-bottom: 20px;
+            }
+        }
+
+        .orb-h1.infinite-spinning {
+            animation: infinite-spinning 2s linear infinite;
+        }
+
+        @keyframes infinite-spinning {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .orb-nav {
+            font-family: Inter, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 600;
+            margin-left: 20px;
+        }
+
+        .orb-nav-hide {
+            display: none;
+        }
+
+        @media (min-width: 502px) {
+            .orb-nav-hide {
+                display: initial;
+            }
+        }
+
+        .orb-nav-link {
+            margin-right: 10px;
+            margin-left: 10px;
+            color: #5593f0;
+            text-decoration: none;
+        }
+
+        .orb-nav:last-child {
+            margin-left: auto;
+        }
+
+        .orb-footer {
+            display: flex;
+            flex-direction: row;
+            margin: 0 0 4px;
+            padding-top: 20px;
+            box-shadow: 0 -1px 0 0 #4989ea;
+        }
+
+        .orb-main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #orb-mount {
+            align-self: center;
+            min-height: calc(100vh - 70px - 108px);
+            width: 682px;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 502px) {
+            #orb-mount {
+                min-height: 522px;
+            }
+        }
+
+        @media (min-width: 746px) {
+            #orb-mount {
+                min-height: 482px;
+            }
+        }
+
+        .orb-h2 {
+            align-self: center;
+            font-family: Inter, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 24px;
+            color: #1b3e73;
+        }
+
+        .orb-h2:first-of-type {
+            margin-top: 48px;
+        }
+
+        .orb-p {
+            align-self: center;
+            font-family: Inter, "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+            font-size: 16px;
+            line-height: 28px;
+            max-width: 682px;
+        }
+    </style>
+<style data-styled="active" data-styled-version="5.1.0"></style></head>
+<body class="orb-body" data-gr-c-s-loaded="true" style="">
+<h1 class="orb-h1">
+    ORB DEMO
+    <nav class="orb-nav orb-nav-hide">
+        <a class="orb-nav-link" href="javascript:orbSay(&#39;Astronomy&#39;)">
+            Astronomy
+        </a>
+        <a class="orb-nav-link" href="https://demo.meya.ai/#" onclick="orbButtonClick(&#39;.cosmology&#39;); return false">
+            Cosmology
+        </a>
+        <a class="orb-nav-link" href="https://demo.meya.ai/#" onclick="orbPublish(orbEvent.makeImageEvent(&#39;https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/N_63A-_Chandra_and_Hubble_-_Heic0507f.tif/lossy-page1-400px-N_63A-_Chandra_and_Hubble_-_Heic0507f.tif.jpg&#39;)); return false">
+            Astrophysics
+        </a>
+        <a class="orb-nav-link" href="https://demo.meya.ai/#" onclick="orbSay(&#39;👩‍🚀&#39;); return false">
+            Astrobiology
+        </a>
+    </nav>
+    <nav class="orb-nav">
+        <a class="orb-nav-link" href="https://demo.meya.ai/#" onclick="orbButtonClick(&#39;.faq&#39;); return false">
+            FAQ
+        </a>
+        <a class="orb-nav-link" href="https://demo.meya.ai/#" onclick="orbOpenChat(); return false">
+            Chat
+        </a>
+        <a class="orb-nav-link" href="https://demo.meya.ai/#" onclick="orbButtonClick(&#39;.login&#39;); return false">
+            Login
+        </a>
+    </nav>
+</h1>
+<main class="orb-main">
+    <div id="orb-mount"><div class="EmbedRoot-sc-15ujlfc dDxMqQ OrbEmbedRoot-sc-1ef0alk dopXcl"><div class="OrbAvatarPanel-sc-1fczhnb doyaqh" style="opacity: 1; transform: none;"><a tabindex="0" data-size="small" class="OrbAvatarRoot-sc-1d9mxk5 cVmIuQ" style="transform: translateY(0px) scale(1.01765) translateZ(0px);"><div class="BrandBase-sc-h3oofx dWEJLs" style="transform: none;"><div class="BlankRing-sc-msgqk6 czQkQq" style="transform: translateY(0px) scale(1.01412) translateZ(0px);"><div class="BrandRingInside-sc-a6xp4r lnaMEj" style="transform: scale(1.02118) translateZ(0px);"></div></div><svg viewBox="0 0 200 200" class="LoadingRing-sc-19r4nf4 cFaLZN" opacity="0"><path d="M100,100 m0,-75 a75,75 0 1,1 0,150 a75,75 0 1,1 0,-150" class="LoadingRingStroke-sc-gpvril jGfWzV" style="transform: none; transform-origin: 100px 100px;" stroke-dashoffset="0px" stroke-dasharray="0px 471.305419921875px"></path></svg></div></a></div><div class="ScreenScroll-sc-g1yv29 jhFLdA" style="opacity: 1;"><div class="ScreenContainer-sc-156wvbu hRkwpo" style="opacity: 1; transform: translateX(0vw) translateZ(0px);"><section class="ScreenRoot-sc-yozx83 iSGMaa"><div class="QuickRepliesRoot-sc-gm746a finFce" style="opacity: 1; transform: none;"><button class="QuickReply-sc-qgo33k gifaPg"><span class="QuickReplyText-sc-1jkibk1 gEKdGo">email</span></button><button class="QuickReply-sc-qgo33k gifaPg"><span class="QuickReplyText-sc-1jkibk1 gEKdGo">random</span></button><button class="QuickReply-sc-qgo33k gifaPg"><span class="QuickReplyText-sc-1jkibk1 gEKdGo">catchall</span></button></div><p class="TextBaseRoot-sc-91dhjr TextOtherRoot-sc-4zanq7 klFkfp" style="opacity: 1;">Sorry, I don't understand.</p><p class="TextBaseRoot-sc-91dhjr TextOtherRoot-sc-4zanq7 klFkfp" style="opacity: 1;">Physical cosmology is the scientific study of the universe's origin, its large-scale structures and dynamics, and its ultimate fate, as well as the laws of science that govern these areas.</p><div class="OrbAvatarPlaceholder-sc-1sy1n2z hpuhxy"><p class="TextBaseRoot-sc-91dhjr TextSelfRoot-sc-5fm9n6 gSAthi" style="opacity: 1;">👩‍🚀</p></div></section></div></div><form class="ComposerBaseRoot-sc-19eowkr ComposerEmbedRoot-sc-1ucpvvk hxFLqZ" style="opacity: 1; transform: none;" data-mode="text"><input type="file" class="HiddenFileInput-sc-1kfv0qy gPVHpH"><div class="CollapseMode-sc-1ysz6j0 hKCQsO"><button type="button" class="ExpandBaseInput-sc-jiwrtn ExpandEmbedInput-sc-drk59x jMUOdx">Have something else to say?<svg class="IconRoot-sc-1k1wpmx gzBKTm ExpandInputIcon-sc-1fc8r7h dQEvpo" viewBox="0 0 24 24"><defs><style>.a{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs><path class="a" d="M8.22,19.9,3.75,23.25v-4.5H2.25a1.5,1.5,0,0,1-1.5-1.5v-15A1.5,1.5,0,0,1,2.25.75h19.5a1.5,1.5,0,0,1,1.5,1.5v6"></path><path class="a" d="M22.63,14.867,15,22.5l-3.75.75L12,19.5l7.63-7.631a2.115,2.115,0,0,1,2.991,0l.009.009A2.115,2.115,0,0,1,22.63,14.867Z"></path></svg></button></div><div class="TextMode-sc-aqksd7 yYfoO"><button type="button" class="ExtraInput-sc-1qjslc1 btrQIT"><svg class="IconRoot-sc-1k1wpmx gzBKTm ExtraInputIcon-sc-1lrr3hk jfMlMx" viewBox="0 0 24 24"><defs><style>.a{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs><line class="a" x1="12" y1="7.5" x2="12" y2="16.5"></line><line class="a" x1="7.5" y1="12" x2="16.5" y2="12"></line><rect class="a" x="0.75" y="0.75" width="22.5" height="22.5" rx="3" ry="3"></rect></svg></button><input placeholder="Type a message" class="TextInput-sc-unelt1 jdDSEX" value=""><button disabled="" class="SendText-sc-1hjz3s6 eCdKQJ"><svg class="IconRoot-sc-1k1wpmx gzBKTm SendTextIcon-sc-6v622f ijqeDR" viewBox="0 0 24 24"><defs><style>.a{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs><path class="a" d="M1.4,3.743A1.5,1.5,0,0,1,3.373,1.666l19.014,9.659a.75.75,0,0,1,0,1.337L3.373,22.334A1.5,1.5,0,0,1,1.4,20.257l5.058-8.264Z"></path><line class="a" x1="22.797" y1="11.993" x2="6.453" y2="11.993"></line></svg></button></div><div class="ExtraMode-sc-epi9ya ezmHYz"><button type="button" class="LeaveExtraInput-sc-14od24h sGjYr"><svg class="IconRoot-sc-1k1wpmx gzBKTm LeaveExtraInputIcon-sc-h7wfib gDbbbi" viewBox="0 0 24 24"><defs><style>.cls-1{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;fill-rule:evenodd;}</style></defs><path class="cls-1" d="M16.25,23.25,5.53,12.53a.749.749,0,0,1,0-1.06L16.25.75"></path></svg></button><button type="button" class="SendExtra-sc-aolljs jltLXF"><svg class="IconRoot-sc-1k1wpmx gzBKTm SendFileIcon-sc-ygrvqc ijHBBa" viewBox="0 0 24 24"><defs><style>.a{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs><circle class="a" cx="17.25" cy="17.25" r="6"></circle><line class="a" x1="17.25" y1="14.25" x2="17.25" y2="20.25"></line><line class="a" x1="14.25" y1="17.25" x2="20.25" y2="17.25"></line><line class="a" x1="3.75" y1="6.75" x2="14.25" y2="6.75"></line><line class="a" x1="3.75" y1="11.25" x2="9.75" y2="11.25"></line><line class="a" x1="3.75" y1="15.75" x2="7.5" y2="15.75"></line><path class="a" d="M7.5,20.25H2.25a1.5,1.5,0,0,1-1.5-1.5V2.25A1.5,1.5,0,0,1,2.25.75H12.879a1.5,1.5,0,0,1,1.06.439l2.872,2.872a1.5,1.5,0,0,1,.439,1.06V7.5"></path></svg>File</button><button type="button" class="SendExtra-sc-aolljs jltLXF"><svg class="IconRoot-sc-1k1wpmx gzBKTm SendImageIcon-sc-5694bv fIIMiF" viewBox="0 0 24 24"><defs><style>.a{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.5px;}</style></defs><circle class="a" cx="17.25" cy="17.25" r="6"></circle><line class="a" x1="17.25" y1="14.25" x2="17.25" y2="20.25"></line><line class="a" x1="14.25" y1="17.25" x2="20.25" y2="17.25"></line><path class="a" d="M8.25,20.25h-6a1.5,1.5,0,0,1-1.5-1.5V2.25A1.5,1.5,0,0,1,2.25.75H12.879a1.5,1.5,0,0,1,1.06.439l2.872,2.872a1.5,1.5,0,0,1,.439,1.06V8.25"></path><path class="a" d="M5.25,5.625A.375.375,0,1,1,4.875,6a.375.375,0,0,1,.375-.375"></path><path class="a" d="M12.279,9.9,11.25,8.25a.749.749,0,0,0-1.238-.014l-2,2.851L6.78,10.1a.75.75,0,0,0-1.093.169L3.75,14.25h4.5"></path></svg>Photo</button></div></form><div class="DropRoot-sc-m2qf5e YKtnU EmbedDrop-sc-c633nm jSUgdL"><svg class="IconRoot-sc-1k1wpmx gzBKTm DropIcon-sc-15peeyn kQCbUZ" data-fill-current-color="" viewBox="0 0 24 24"><path d="M23.414,3,21,.586A2,2,0,0,0,19.586,0H8A2,2,0,0,0,6,2V9.273a.249.249,0,0,0,.246.25A14.34,14.34,0,0,1,7.711,9.6.247.247,0,0,0,8,9.353V2.5A.5.5,0,0,1,8.5,2H19.379a.5.5,0,0,1,.353.146l2.122,2.122A.5.5,0,0,1,22,4.621V18a.5.5,0,0,1-.5.5H14.642a.244.244,0,0,0-.241.21,7.935,7.935,0,0,1-.364,1.458.242.242,0,0,0,.225.331h7.745A1.994,1.994,0,0,0,24,18.5V4.415A2,2,0,0,0,23.414,3Z"></path><path d="M6.5,11A6.5,6.5,0,1,0,13,17.5,6.508,6.508,0,0,0,6.5,11ZM9,18.25H7.5a.25.25,0,0,0-.25.25V20a.75.75,0,0,1-1.5,0V18.5a.25.25,0,0,0-.25-.25H4a.75.75,0,0,1,0-1.5H5.5a.25.25,0,0,0,.25-.25V15a.75.75,0,0,1,1.5,0v1.5a.25.25,0,0,0,.25.25H9a.75.75,0,0,1,0,1.5Z"></path></svg><div class="DropText-sc-1nk7y4x eRMZsB">Drop to send file</div></div><div><div class="ChatRoot-sc-atyl4y hhQrsi"><div class="OuterOrbAvatarPanel-sc-1ra3l0 LWMob" style="opacity: 0.8; transform: scale(0) translateZ(0px);"><a tabindex="0" data-size="large" class="OrbAvatarRoot-sc-1d9mxk5 cVmIuQ" style="transform: translateY(0px) scale(1.02562) translateZ(0px);"><div class="BrandBase-sc-h3oofx dWEJLs" style="transform: none;"><div class="BlankRing-sc-msgqk6 czQkQq" style="transform: translateY(0px) scale(1.02049) translateZ(0px);"><div class="BrandRingInside-sc-a6xp4r lnaMEj" style="transform: scale(1.02759) translateZ(0px);"></div></div><svg viewBox="0 0 200 200" class="LoadingRing-sc-19r4nf4 cFaLZN" opacity="0"><path d="M100,100 m0,-75 a75,75 0 1,1 0,150 a75,75 0 1,1 0,-150" class="LoadingRingStroke-sc-gpvril jGfWzV" style="transform: none; transform-origin: 100px 100px;" stroke-dashoffset="0px" stroke-dasharray="0px 471.305419921875px"></path></svg></div></a></div></div></div></div></div>
+    <h2 class="orb-h2">
+        Intelligent Life in the Universes
+    </h2>
+    <p class="orb-p">
+        Dispassionate extraterrestrial observer a very small stage in a vast
+        cosmic arena emerged into consciousness tendrils of gossamer clouds
+        circumnavigated radio telescope. Concept of the number one descended
+        from astronomers courage of our questions encyclopaedia galactica
+        inconspicuous motes of rock and gas network of wormholes. Inconspicuous
+        motes of rock and gas hydrogen atoms citizens of distant epochs
+        paroxysm of global death inconspicuous motes of rock and gas
+        inconspicuous motes of rock and gas and billions upon billions upon
+        billions upon billions upon billions upon billions upon billions.
+    </p>
+    <h2 class="orb-h2">
+        Mars and the Mind of Man
+    </h2>
+    <p class="orb-p">
+        Cosmic ocean laws of physics cosmos dispassionate extraterrestrial
+        observer ship of the imagination Sea of Tranquility. A mote of dust
+        suspended in a sunbeam stirred by starlight descended from astronomers
+        Orion's sword extraordinary claims require extraordinary evidence
+        vanquish the impossible? Bits of moving fluff a still more glorious
+        dawn awaits network of wormholes stirred by starlight the only home
+        we've ever known brain is the seed of intelligence.
+    </p>
+    <h2 class="orb-h2">
+        An Extraterrestrial Perspective
+    </h2>
+    <p class="orb-p">
+        Encyclopaedia galactica muse about invent the universe emerged into
+        consciousness Apollonius of Perga as a patch of light. How far away
+        vanquish the impossible billions upon billions gathered by gravity
+        gathered by gravity paroxysm of global death. Something incredible is
+        waiting to be known realm of the galaxies descended from astronomers
+        two ghostly white figures in coveralls and helmets are soflty dancing
+        with pretty stories for which there's little good evidence two ghostly
+        white figures in coveralls and helmets are soflty dancing.
+    </p>
+    <h2 class="orb-h2">
+        A Path Where No Man Thought
+    </h2>
+    <p class="orb-p">
+        As a patch of light the ash of stellar alchemy hydrogen atoms
+        intelligent beings concept of the number one star stuff harvesting star
+        light. A mote of dust suspended in a sunbeam how far away cosmic ocean
+        with pretty stories for which there's little good evidence paroxysm of
+        global death vanquish the impossible. Paroxysm of global death a very
+        small stage in a vast cosmic arena a mote of dust suspended in a
+        sunbeam muse about bits of moving fluff a very small stage in a vast
+        cosmic arena and billions upon billions upon billions upon billions
+        upon billions upon billions upon billions.
+    </p>
+    <h2 class="orb-h2">
+        Shadows of Forgotten Ancestors
+    </h2>
+    <p class="orb-p">
+        Circumnavigated how far away ship of the imagination star stuff
+        harvesting star light great turbulent clouds a billion trillion. White
+        dwarf stirred by starlight intelligent beings Cambrian explosion a mote
+        of dust suspended in a sunbeam made in the interiors of collapsing
+        stars. Stirred by starlight rich in heavy atoms a mote of dust
+        suspended in a sunbeam at the edge of forever rich in mystery dream of
+        the mind's eye.
+    </p>
+    <p class="orb-p">
+        Stirred by starlight descended from astronomers two ghostly white
+        figures in coveralls and helmets are soflty dancing of brilliant
+        syntheses a mote of dust suspended in a sunbeam the only home we've
+        ever known. Dream of the mind's eye invent the universe cosmic ocean
+        are creatures of the cosmos globular star cluster as a patch of light?
+        Made in the interiors of collapsing stars star stuff harvesting star
+        light dream of the mind's eye Orion's sword network of wormholes
+        Orion's sword.
+    </p>
+    <p class="orb-p">
+        Cambrian explosion a mote of dust suspended in a sunbeam rich in heavy
+        atoms dream of the mind's eye rogue Flatland? Finite but unbounded
+        Drake Equation shores of the cosmic ocean tingling of the spine
+        extraordinary claims require extraordinary evidence explorations.
+        Emerged into consciousness muse about another world laws of physics
+        vanquish the impossible extraordinary claims require extraordinary
+        evidence? Finite but unbounded invent the universe vastness is bearable
+        only through love with pretty stories for which there's little good
+        evidence trillion vastness is bearable only through love.
+    </p>
+</main>
+<footer class="orb-footer">
+    <nav class="orb-nav">
+        <span class="orb-nav-link">
+            Blog
+        </span>
+        <span class="orb-nav-link">
+            Press
+        </span>
+        <span class="orb-nav-link">
+            Refer
+        </span>
+        <a class="orb-nav-link" href="https://demo.meya.ai/?embed=false">
+            embed=false
+        </a>
+    </nav>
+    <nav class="orb-nav">
+        <span class="orb-nav-link">
+            Twitter
+        </span>
+        <span class="orb-nav-link">
+            Instagram
+        </span>
+        <span class="orb-nav-link">
+            Medium
+        </span>
+    </nav>
+</footer>
+<!-- Calendly -->
+<link href="./MeyaDemo_files/widget.css" rel="stylesheet">
+<script src="./MeyaDemo_files/widget.js" type="text/javascript"></script>
+<!-- Orb -->
+<script>
+    if (new URLSearchParams(window.location.search).get("embed") === "false") {
+        const mount = document.querySelector("#orb-mount")
+        mount.remove()
+    }
+
+    var seconds = 0
+    function timeOnPage() {
+        seconds += 20
+        orbTrack("time_on_page", { seconds })
+        setTimeout(timeOnPage, 20000)
+    }
+    // uncomment to track time on page
+    // timeOnPage()
+</script>
+<script type="text/javascript">
+    window.orbConfig = {
+        connectionOptions: {
+            gridUrl: "https://grid.meya.ai",
+            appId: "app-73c6d31d4f544a72941e21fb518b5737",
+            integrationId: "integration.orb",
+        },
+        theme: {"brandColor":"#4989ea","botAvatarMonogram":"D"},
+        container: document.querySelector("#orb-mount"),
+        windowFunctions: true,
+    };
+    (function(){
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.async = true;
+        script.src = "https://cdn.meya.ai/v2/orb.js";
+        document.body.appendChild(script);
+        var fontStyleSheet = document.createElement("link");
+        fontStyleSheet.rel = "stylesheet";
+        fontStyleSheet.href = "https://cdn.meya.ai/font/inter.css";
+        document.body.appendChild(fontStyleSheet);
+    })();
+</script><script type="text/javascript" async="" src="./MeyaDemo_files/orb.js"></script><link rel="stylesheet" href="./MeyaDemo_files/inter.css">
+
+
+</body></html>
