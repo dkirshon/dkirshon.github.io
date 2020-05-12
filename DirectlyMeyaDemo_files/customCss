@@ -1,0 +1,7 @@
+.markdown-preview-container > p {
+     padding-bottom: 10px;
+}
+
+.markdown-preview-container .markdown-preview-image { max-height: 500px; margin: 20px -20px; }
+
+.knowledge-base-article-overlay-container { padding: 20px; }
